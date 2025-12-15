@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Coderats</title>
+        <style>
+            #container{
+                background-color:  #06011c;
+                font-family:'Courier New', Courier, monospace;
+            
+            }
+            #header_title{
+                border: 3px solid white;
+                background-color:#06011c ;
+                color: white;
+                text-align: center;
+                padding-inline: 15px;
+                border-radius: 15px;
+                margin-top: 10px;
+                filter:drop-shadow(0px 0px 5px);
+            }
+            #ranking{
+                text-align: center;
+                color: white;
+                border: 3px solid white;
+            }
+            #top_problem{
+                border: 3px solid white;
+                color: white;
+            }
+            #last_solved{
+                border: 3px solid white;
+                color: white;
+            }
+            .section_text{
+                color: white;
+                text-align: center;
+            }
+            .row{
+                
+                display: flex;
+            }
+            .column{
+                margin: 5px;
+                flex-grow: 1;
+            }
+            .flex_container{
+                display: flex;
+                flex-direction: column;
+            }
+            .item_container{
+                display: flex;
+                background-color: white;
+                justify-content: space-between;
+                border: 1px solid gray;
+                padding: 5px;
+            }
+            .item_text{
+                color: black;
+            }
+            .item_score{
+                color: black;
+                font-weight: bold;
+            }
+            .tag{
+                border: 1px;
+                border-radius: 10px;
+                padding: 3px;
+                color: black;
+                background-color: white;
+            }
+            table{
+                width: 100%;
+            }
+            table,th,td{
+                color: white;
+                border: 1px solid white;
+            }
+            td{
+                background-color: white;
+                color: black;
+            }
+        </style>
+    </head>
+    <body id="container">
+        <div id="header_title"><h1 >CodeRats</h1></div>
+        <main id="main" class="row">
+            <div class="column">
+                <h3 class="section_text">Ranking</h3>
+                <div id="ranking" class="flex_container">
+                </div>
+            </div>
+            <div class="column">
+                <h3 class="section_text">Top problem</h3>
+                <div id="top_problem"></div>
+                <h3 class="section_text">Last solved</h3>
+                <div id="last_solved">
+                <table id="last_solved_table">
+                    <tr>
+                        <th>
+                            Problema
+                        </th>
+                        <th>
+                            Rating
+                        </th>
+                        <th>
+                            Data
+                        </th>
+                        <th>
+                            Feito por
+                        </th>
+                        <th>
+                            Pontuação
+                        </th>
+                    </tr>
+                </table>
+            </div>
+            </div>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        </main>
+    </body>
+</html>
