@@ -79,42 +79,104 @@
                 background-color: white;
                 color: black;
             }
+                        #footnote{
+
+                position: fixed;
+                bottom: 5%;
+                right: 5%;
+                display: flex;
+                flex-direction: row;
+            }
+            .footnote_box #twitter{
+                width: 35px;
+            }
+            .footnote_box #github{
+                width: 30px;
+            }
+            .footnote_text{
+                display: none;
+                opacity: 0;
+                transition: opacity 0.5s;
+                align-content: center;
+            }
+            .footnote_box{
+                background-color: white;
+                display: flex;
+                flex-direction: row;
+                margin: 5px;
+                color:#06011c;
+                width:40px;
+                height: auto;
+                border-radius: 10px;
+                transition:width 0.25s;
+            }
+            .footnote_box:hover  > .footnote_text{
+                display: initial;
+                opacity: 100;
+            }
+            .footnote_box:hover{
+                width: 155px;
+            }
         </style>
     </head>
     <body id="container">
         <div id="header_title"><h1 >CodeRats</h1></div>
-        <main id="main" class="row">
-            <div class="column">
-                <h3 class="section_text">Ranking</h3>
-                <div id="ranking" class="flex_container">
+        <main id="main" class="column">
+            <div class="row">
+                <div class="column">
+                    <h3 class="section_text">Ranking</h3>
+                    <div id="ranking" class="flex_container">
+                    </div>
+                </div>
+                <div class="column">
+                    <h3 class="section_text">Top problem</h3>
+                    <div id="top_problem"></div>
+                    <h3 class="section_text">Last solved</h3>
+                    <div id="last_solved">
+                    <table id="last_solved_table">
+                        <tr>
+                            <th>
+                                Problema
+                            </th>
+                            <th>
+                                Rating
+                            </th>
+                            <th>
+                                Data
+                            </th>
+                            <th>
+                                Feito por
+                            </th>
+                            <th>
+                                Pontuação
+                            </th>
+                        </tr>
+                    </table>
                 </div>
             </div>
-            <div class="column">
-                <h3 class="section_text">Top problem</h3>
-                <div id="top_problem"></div>
-                <h3 class="section_text">Last solved</h3>
-                <div id="last_solved">
-                <table id="last_solved_table">
-                    <tr>
-                        <th>
-                            Problema
-                        </th>
-                        <th>
-                            Rating
-                        </th>
-                        <th>
-                            Data
-                        </th>
-                        <th>
-                            Feito por
-                        </th>
-                        <th>
-                            Pontuação
-                        </th>
-                    </tr>
-                </table>
+            
+            <div id="footnote">
+            <a target= "_blank" href="https://www.instagram.com/theo.duarte/">
+                <div class="footnote_box">
+                    <image style="height: 40px;" src="images/instragram_logo.png">
+                    <strong class="footnote_text">@theo_duarte</strong>
+                </div>
+            </a>
+            <a target= "_blank" href="//github.com/theolara272727">
+                <div id="github" style="padding: 3px;" class="footnote_box">
+                    <image style="height: 35px" src="images/github_logo.png">
+                    <strong class="footnote_text">@theo272727</strong>
+                </div>
+            </a>
+            <a target= "_blank" href="https://twitter.com/oduartelara">
+                <div style="padding: 3px;" class="footnote_box" id="twitter">
+                    <image style="height: 35px" src="images/X_logo.avif">
+                        <strong class="footnote_text">@oduartelara</strong>
+                </div>
+            </a>
+         
             </div>
-            </div>
+
         <script src="{{ url_for('static', filename='js/script.js') }}"></script>
         </main>
     </body>
