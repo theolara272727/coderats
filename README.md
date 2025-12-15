@@ -5,8 +5,8 @@ This websites utilizes Codeforces API to score (based on accepted problem's rati
 
 The flask server is just for testing. To configure the website, put your friends username on the "handles" array on script.js, along with the unix timestamp from the start date of your competition!.
 
-#Score calculation
+# Score calculation
 To avoid farming points with easy problems, the score is given depending on the amount of problems solved with that rating, scaling with a logarithmic function. We have that a given problem rating $R$ with $x$ problems solved gives a score defined as:
-$$
+```math 
 score(R,x) = R(1+2.5\log x)
-$$
+```
