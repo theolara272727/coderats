@@ -1,13 +1,9 @@
-////////////////VARIAVEIS DE CONFIGURACAO
+////////////////CONFIG VALUES
 var handles = 
 [
-    "theo272727",
-    "qqqw2",
-    "marney",
-    "vrrocha",
-    "KaizerBlank",
+
 ]
-initDate =1754606007;
+initDate = 0;
 ////////////////
 var main = document.getElementById('main');
 var scoreList = document.getElementById('ranking');
@@ -167,3 +163,4 @@ for (let handle of handles){
     })
 
 }
+
