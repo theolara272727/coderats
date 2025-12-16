@@ -10,3 +10,5 @@ To avoid farming points with easy problems, the score is given depending on the 
 ```math 
 score(R,x) = R(1+2.5\log x)
 ```
+# Current Competition
+See my current competition with my friends at: https://homepages.dcc.ufmg.br/~theoduarte/coderats.html
